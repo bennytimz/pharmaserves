@@ -11,8 +11,8 @@ if (!apiKey) {
 }
 
 export const shelbyClient = new ShelbyNodeClient({
-  network: Network.SHELBYNET,
+  network: Network.TESTNET,
   apiKey,
 });
 
-console.log("PharmaServes client initialized on shelbynet ✓");
+console.log("PharmaServes client initialized on testnet ✓");

@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-const aptos = new Aptos(new AptosConfig({ network: Network.SHELBYNET }));
+const aptos = new Aptos(new AptosConfig({ network: Network.TESTNET }));
 
 const balance = await aptos.getAccountAPTAmount({
   accountAddress: process.env.PHARMASERVES_ADDRESS!,

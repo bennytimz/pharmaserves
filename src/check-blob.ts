@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const client = new ShelbyNodeClient({
-  network: Network.SHELBYNET,
+  network: Network.TESTNET,
   apiKey: process.env.SHELBY_API_KEY!,
 });
 
