@@ -1,15 +1,40 @@
 {
-  "name": "pharmaserves",
-  "version": "1.0.0",
+  "name": "pharmaserves-sdk",
+  "version": "0.1.0",
+  "description": "Decentralized genomic data storage layer for African drug discovery — built on Shelby Protocol",
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "./dist/sdk/index.js",
+  "types": "./dist/sdk/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/sdk/index.d.ts",
+      "import": "./dist/sdk/index.js"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "files": [
+    "dist/sdk"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "genomics",
+    "shelby",
+    "decentralized-storage",
+    "drug-discovery",
+    "africa",
+    "bioinformatics",
+    "aptos",
+    "web3"
+  ],
+  "author": "bennytimz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennytimz/pharmaserves.git"
+  },
+  "homepage": "https://github.com/bennytimz/pharmaserves#readme",
   "dependencies": {
     "@aptos-labs/ts-sdk": "^5.2.1",
     "@shelby-protocol/sdk": "^0.2.4",
@@ -17,9 +42,8 @@
     "tweetnacl": "^1.0.3",
     "tweetnacl-util": "^0.15.1"
   },
-  "devDependencies": {
-    "@types/node": "^25.4.0",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+  "peerDependencies": {
+    "@aptos-labs/ts-sdk": "^5.2.1",
+    "@shelby-protocol/sdk": "^0.2.4"
   }
 }
